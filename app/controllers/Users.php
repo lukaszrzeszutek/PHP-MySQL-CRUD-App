@@ -65,6 +65,7 @@ class Users extends Controller {
 
         // Register User
         if($this->userModel->register($data)){
+          flash('register_success', 'You are registered and can log in');
           redirect('users/login');
         } else {
           die('Something went wrong');
@@ -118,7 +119,7 @@ class Users extends Controller {
       //Make sure errors are empty
       if(empty($data['email_err']) && empty($data['password_err'])){
         //Validated
-        die('Something went wrong');
+        die('Success');
 
       } else {
         // Load view with errors
