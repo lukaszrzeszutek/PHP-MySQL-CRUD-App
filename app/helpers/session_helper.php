@@ -25,10 +25,14 @@ function flash($name = '', $message = '', $class = 'alert alert-success'){
       unset($_SESSION[$name]);
       unset($_SESSION[$name . '_class']);
 
-
     }
-
-
   }
+}
 
+function isLoggedIn(){
+  if(isset($_SESSION['user_id'])){
+    return true;
+  } else {
+    return false;
+  }
 }
