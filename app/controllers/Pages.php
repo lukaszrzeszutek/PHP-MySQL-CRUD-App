@@ -10,8 +10,8 @@ class Pages extends Controller {
       redirect('posts');
     }
     $data = [
-      'title' => 'SharePosts',
-      'description' => 'Simple App built on the MVC PHP framework'
+      'title' => 'CRUD&APP',
+      'description' => 'Simple App built on the my own MVC PHP framework'
     ];
 
     $this->view('pages/index', $data);
